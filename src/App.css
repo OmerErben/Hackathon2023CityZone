@@ -2,6 +2,14 @@
   text-align: center;
 }
 
+body {
+  margin: 0;
+  padding: 0;
+  background: url('../public/background_img.jpeg') no-repeat center center fixed;
+  background-size: cover;
+}
+
+
 .App-logo {
   height: 40vmin;
   pointer-events: none;

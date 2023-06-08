@@ -1,25 +1,30 @@
 import logo from './logo.svg';
+import AuthenticationPage from './AuthenticationPage';
 import './App.css';
+import {useNavigate} from "react-router-dom";
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn Reactttt
-        </a>
-      </header>
-    </div>
-  );
+    const navigate = useNavigate();
+    const navigateToPassengers = () => {
+        // 👇️ navigate to /contacts
+        navigate('/PassengerListPage');
+    };
+    const navigateToDrivers = () => {
+        // 👇️ navigate to /contacts
+        navigate('/PassengerListPage');
+    };
+    const navigateHome = () => {
+        // 👇️ navigate to /
+        navigate('/');
+    };
+    return (
+        <div className="App">
+            <h1>Welcome to TakeAway!</h1>
+            <div className="container"> {/* Add the class name */}
+              <AuthenticationPage />
+            </div>
+        </div>
+    );
 }
 
 export default App;
