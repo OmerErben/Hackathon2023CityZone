@@ -1,11 +1,11 @@
 import React, {useState} from 'react';
-import { MdCheck } from 'react-icons/md';
+import './PassengerListPage.css';
 
 const PassengerListPage = () => {
     const passengers = [
-        { id: 1, name: 'John Doe', mutual_friend: "10", departure_time: "16:00", familiarity: "2nd circle"},
-        { id: 2, name: 'Jane Smith', mutual_friend: "5", departure_time: "19:37", familiarity: "1st circle" },
-        { id: 3, name: 'Alex Johnson', mutual_friend: "4", departure_time: "11:40", familiarity: "3rd circle" },
+        { id: 1, name: 'John Doe', mutual_friends: "10", departure_time: "16:00", familiarity: "2nd circle"},
+        { id: 2, name: 'Jane Smith', mutual_friends: "5", departure_time: "19:37", familiarity: "1st circle" },
+        { id: 3, name: 'Alex Johnson', mutual_friends: "4", departure_time: "11:40", familiarity: "3rd circle" },
         // Add more passengers as needed
     ];
 
@@ -29,14 +29,19 @@ const PassengerListPage = () => {
     return (
         <div className="passenger-list-container">
             <h2>Passenger List</h2>
-            <ul>
+            <ul className="passenger-list">
                 {passengers.map((passenger) => (
-                    <li key={passenger.id}>
-                        <span>{"Name: " + passenger.name + " Departure: " + passenger.departure_time + " Familiarity: " + passenger.familiarity + " Number of Mutual Friends: " + passenger.mutual_friends + " "}</span>
+                    <li key={passenger.id} className="passenger-item">
+            <span>
+              <strong>Name:</strong> {passenger.name}<br />
+              <strong>Departure:</strong> {passenger.departure_time}<br />
+              <strong>Familiarity:</strong> {passenger.familiarity}<br />
+              <strong>Number of Mutual Friends:</strong> {passenger.mutual_friends}
+            </span>
                         <button
                             onClick={() => handleButtonClick(passenger.id)}
-                            className={isPassengerSent(passenger.id) ? 'sent' : ''}>
-                            {isPassengerSent(passenger.id) ? 'Cancel Match' : "Match!"}
+                            className={`match-button ${isPassengerSent(passenger.id) ? 'sent' : ''}`}>
+                            {isPassengerSent(passenger.id) ? 'Cancel Match' : 'Match!'}
                         </button>
                     </li>
                 ))}

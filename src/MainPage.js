@@ -18,20 +18,24 @@ const MainPage = () => {
     return (
         <div>
             <h2>Welcome to the Main Page!</h2>
-            <form>
-                <label>Destination</label>
-                <input type="text" id="name" placeholder="Destination"/>
-            </form>
-            <form>
-                <label>Departure Time</label>
-                <input type="text" id="name" placeholder="Now"/>
-            </form>
-            <form>
-                <label>Departure Location</label>
-                <input type="text" id="name" placeholder="My Current Location"/>
-            </form>
-            <button onClick={navigateToPassengers}>Find Passengers</button>
-            <button onClick={navigateToDrivers}>Find a Driver</button>
+            <div style={{flexWrap: "nowrap", flexDirection: "row-reverse", justifyContent: "center", left: "auto", right: "auto", display: "flex"}}>
+                <form style={{marginLeft: "15px"}}>
+                    <label>Destination </label>
+                    <input type="text" id="name" placeholder="Destination"/>
+                </form>
+                <form style={{marginLeft: "15px"}}>
+                    <label>Departure Time </label>
+                    <input type="text" id="name" placeholder="Now"/>
+                </form>
+                <form style={{marginLeft: "15px"}}>
+                    <label>Departure Location </label>
+                    <input type="text" id="name" placeholder="My Current Location"/>
+                </form>
+            </div>
+            <div>
+                <button onClick={navigateToPassengers} style={{marginTop: "15px", marginLeft: "15px"}}>Find Passengers</button>
+                <button onClick={navigateToDrivers} style={{marginTop: "15px", marginLeft: "15px"}}>Find a Driver</button>
+            </div>
             <Routes>
                 <Route path="/PassengerListPage" element={<PassengerListPage />} />
                 <Route path="/DriverListPage" element={<DriverListPage />} />

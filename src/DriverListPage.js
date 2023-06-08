@@ -1,4 +1,5 @@
 import React, {useState} from 'react';
+import './PassengerListPage.css';
 
 const DriverListPage = () => {
     const drivers = [
@@ -27,15 +28,20 @@ const DriverListPage = () => {
 
     return (
         <div className="passenger-list-container">
-            <h2>Driver List</h2>
-            <ul>
+            <h2>Drivers List</h2>
+            <ul className="passenger-list">
                 {drivers.map((driver) => (
-                    <li key={driver.id}>
-                        <span>{"Name: " + driver.name + " Departure: " + driver.departure_time + " Familiarity: " + driver.familiarity + " Number of Mutual Friends: " + driver.mutual_friends + " "}</span>
+                    <li key={driver.id} className="passenger-item">
+            <span>
+              <strong>Name:</strong> {driver.name}<br />
+              <strong>Departure:</strong> {driver.departure_time}<br />
+              <strong>Familiarity:</strong> {driver.familiarity}<br />
+              <strong>Number of Mutual Friends:</strong> {driver.mutual_friends}
+            </span>
                         <button
                             onClick={() => handleButtonClick(driver.id)}
-                            className={isDriverSent(driver.id) ? 'sent' : ''}>
-                            {isDriverSent(driver.id) ? 'Cancel Match' : "Match!"}
+                            className={`match-button ${isDriverSent(driver.id) ? 'sent' : ''}`}>
+                            {isDriverSent(driver.id) ? 'Cancel Match' : 'Match!'}
                         </button>
                     </li>
                 ))}

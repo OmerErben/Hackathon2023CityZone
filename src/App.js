@@ -19,7 +19,7 @@ function App() {
     };
     return (
         <div className="App">
-            <h1>Welcome to TakeAway!</h1>
+            <h1>Welcome to PalPool!</h1>
             <div className="container"> {/* Add the class name */}
               <AuthenticationPage />
             </div>
