@@ -1,0 +1,48 @@
+.passenger-list-container {
+    margin-top: 20px;
+}
+
+.passenger-list {
+    list-style-type: none;
+    padding: 0;
+}
+
+.passenger-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    border: 1px solid #ccc;
+    margin-bottom: 10px;
+    background-color: rgb(220,220,220, 0.4)
+}
+
+.logo {
+    width: 100px; /* Adjust the size as per your preference */
+    height: 100px; /* Adjust the size as per your preference */
+}
+
+.match-button {
+    background-color: #4caf50;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin-right: 20px;
+    max-width: 75px;
+    height: 47px;
+}
+
+.match-button.sent {
+    background-color: #f44336;
+}
+
+.match-button:hover {
+    background-color: #45a049;
+}
+
+.match-button.sent:hover {
+    background-color: #f77171;
+}
