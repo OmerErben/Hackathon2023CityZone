@@ -3,9 +3,9 @@ import { MdCheck } from 'react-icons/md';
 
 const PassengerListPage = () => {
     const passengers = [
-        { id: 1, name: 'John Doe' },
-        { id: 2, name: 'Jane Smith' },
-        { id: 3, name: 'Alex Johnson' },
+        { id: 1, name: 'John Doe', mutual_friend: "10", departure_time: "16:00", familiarity: "2nd circle"},
+        { id: 2, name: 'Jane Smith', mutual_friend: "5", departure_time: "19:37", familiarity: "1st circle" },
+        { id: 3, name: 'Alex Johnson', mutual_friend: "4", departure_time: "11:40", familiarity: "3rd circle" },
         // Add more passengers as needed
     ];
 
@@ -32,7 +32,7 @@ const PassengerListPage = () => {
             <ul>
                 {passengers.map((passenger) => (
                     <li key={passenger.id}>
-                        <span>{passenger.name + " "}</span>
+                        <span>{"Name: " + passenger.name + " Departure: " + passenger.departure_time + " Familiarity: " + passenger.familiarity + " Number of Mutual Friends: " + passenger.mutual_friends + " "}</span>
                         <button
                             onClick={() => handleButtonClick(passenger.id)}
                             className={isPassengerSent(passenger.id) ? 'sent' : ''}>

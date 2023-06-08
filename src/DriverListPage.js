@@ -2,9 +2,9 @@ import React, {useState} from 'react';
 
 const DriverListPage = () => {
     const drivers = [
-        { id: 1, name: 'Amir Ben Izhak' },
-        { id: 2, name: 'Itay Gonen' },
-        { id: 3, name: 'Omer Erben' },
+        { id: 1, name: 'Amir Ben Izhak', mutual_friends: "40", departure_time: "09:15", familiarity: "1st circle"},
+        { id: 2, name: 'Itay Gonen', mutual_friends: "2", departure_time: "22:22", familiarity: "1st circle"},
+        { id: 3, name: 'Omer Erben', mutual_friends: "30", departure_time: "15:30", familiarity: "2nd circle"},
         // Add more drivers as needed
     ];
 
@@ -31,7 +31,7 @@ const DriverListPage = () => {
             <ul>
                 {drivers.map((driver) => (
                     <li key={driver.id}>
-                        <span>{driver.name + " "}</span>
+                        <span>{"Name: " + driver.name + " Departure: " + driver.departure_time + " Familiarity: " + driver.familiarity + " Number of Mutual Friends: " + driver.mutual_friends + " "}</span>
                         <button
                             onClick={() => handleButtonClick(driver.id)}
                             className={isDriverSent(driver.id) ? 'sent' : ''}>
