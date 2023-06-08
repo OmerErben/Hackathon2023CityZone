@@ -67,7 +67,7 @@ const AuthenticationPage = () => {
                           alignContent: "center", justifyContent: "center", alignItems: "flex-start"}}>
                     <div style={{marginTop: "5px"}}>
                         <label>Name:</label>
-                        <input type="email" value={name} onChange={handleNameChange} style={{marginLeft: "60px"}}/>
+                        <input value={name} onChange={handleNameChange} style={{marginLeft: "60px"}}/>
                     </div>
                     <div style={{marginTop: "5px"}}>
                         <label>Email:</label>
