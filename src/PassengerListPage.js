@@ -25,16 +25,6 @@ const PassengerListPage = () => {
 
     const isPassengerSent = (passengerId) => sentPassengers.includes(passengerId);
 
-    const sortPassengers = (key) => {
-        const sortedPassengers = [...passengers].sort((a, b) => {
-            if (a[key] < b[key]) return -1;
-            if (a[key] > b[key]) return 1;
-            return 0;
-        });
-
-        setPassengers(sortedPassengers);
-    };
-
     return (
         <div className="passenger-list-container">
             <h2>Passenger List</h2>

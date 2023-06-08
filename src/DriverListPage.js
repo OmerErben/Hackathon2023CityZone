@@ -25,16 +25,6 @@ const DriverListPage = () => {
 
     const isDriverSent = (driverId) => sentDrivers.includes(driverId);
 
-    const sortDrivers = (key) => {
-        const sortedDrivers = [...drivers].sort((a, b) => {
-            if (a[key] < b[key]) return -1;
-            if (a[key] > b[key]) return 1;
-            return 0;
-        });
-
-        setDrivers(sortedDrivers);
-    };
-
     return (
         <div className="passenger-list-container">
             <h2>Drivers List</h2>

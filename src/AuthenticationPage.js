@@ -21,12 +21,10 @@ const AuthenticationPage = () => {
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        // Perform authentication logic here
         console.log('Email:', email);
         console.log('Password:', password);
         console.log('Mode:', isSignUp ? 'Sign Up' : 'Sign In');
-        // You can add your authentication logic or API calls here
-        // For simplicity, we are just logging the email, password, and mode to the console
+        // Todo: Add authentication api logic if there's time
         setIsLoggedIn(true);
     };
 
