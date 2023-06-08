@@ -37,16 +37,20 @@ const AuthenticationPage = () => {
     return (
         <div>
             <h2>{isSignUp ? 'Sign Up' : 'Sign In'}</h2>
-            <form onSubmit={handleSubmit}>
+            <form onSubmit={handleSubmit}
+                  style={{display: "flex", flexDirection: "column", flexWrap: "wrap",
+                      alignContent: "center", justifyContent: "center", alignItems: "flex-start"}}>
                 <div>
                     <label>Email:</label>
-                    <input type="email" value={email} onChange={handleEmailChange} />
+                    <input type="email" value={email} onChange={handleEmailChange} style={{marginLeft: "34px"}}/>
                 </div>
                 <div>
                     <label>Password:</label>
-                    <input type="password" value={password} onChange={handlePasswordChange} />
+                    <input type="password" value={password} onChange={handlePasswordChange} style={{marginLeft: "3px"}}/>
                 </div>
-                <button type="submit">{isSignUp ? 'Sign Up' : 'Sign In'}</button>
+                <button type="submit" style={{marginLeft: "40px", marginTop: "20px", width: "150px"}}>
+                    {isSignUp ? 'Sign Up' : 'Sign In'}
+                </button>
             </form>
             <p>
                 {isSignUp ? 'Already have an account?' : "Don't have an account?"}{' '}
