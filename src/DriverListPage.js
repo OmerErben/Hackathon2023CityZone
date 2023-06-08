@@ -1,11 +1,12 @@
 import React, {useState} from 'react';
 import './PassengerListPage.css';
+import logo from "./worker.png";
 
 const DriverListPage = () => {
     const drivers = [
-        { id: 1, name: 'Amir Ben Izhak', mutual_friends: "40", departure_time: "09:15", familiarity: "1st circle"},
-        { id: 2, name: 'Itay Gonen', mutual_friends: "2", departure_time: "22:22", familiarity: "1st circle"},
-        { id: 3, name: 'Omer Erben', mutual_friends: "30", departure_time: "15:30", familiarity: "2nd circle"},
+        { id: 1, name: 'Amir Ben Izhak', mutual_friends: "40", departure_time: "09:15", familiarity: "1st Circle"},
+        { id: 2, name: 'Itay Gonen', mutual_friends: "2", departure_time: "22:22", familiarity: "1st Circle"},
+        { id: 3, name: 'Omer Erben', mutual_friends: "30", departure_time: "15:30", familiarity: "2nd Circle"},
         // Add more drivers as needed
     ];
 
@@ -32,12 +33,13 @@ const DriverListPage = () => {
             <ul className="passenger-list">
                 {drivers.map((driver) => (
                     <li key={driver.id} className="passenger-item">
-            <span>
-              <strong>Name:</strong> {driver.name}<br />
-              <strong>Departure:</strong> {driver.departure_time}<br />
-              <strong>Familiarity:</strong> {driver.familiarity}<br />
-              <strong>Number of Mutual Friends:</strong> {driver.mutual_friends}
-            </span>
+                        <img style={{maxWidth: "100px", maxHeight: "100px"}} src={logo} alt="React Logo"/>
+                        <span style={{marginLeft: "20px" ,textAlign: "left"}}>
+                          <strong>Name:</strong> {driver.name}<br />
+                          <strong>Departure Time:</strong> {driver.departure_time}<br />
+                          <strong>Familiarity:</strong> {driver.familiarity}<br />
+                          <strong>Mutual Friends:</strong> {driver.mutual_friends}
+                        </span>
                         <button
                             onClick={() => handleButtonClick(driver.id)}
                             className={`match-button ${isDriverSent(driver.id) ? 'sent' : ''}`}>

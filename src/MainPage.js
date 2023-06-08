@@ -17,7 +17,7 @@ const MainPage = () => {
     let cancel = false;
     return (
         <div>
-            <h2>Welcome to the Main Page!</h2>
+            <h2>Please fill the fields below</h2>
             <div style={{flexWrap: "nowrap", flexDirection: "row-reverse", justifyContent: "center", left: "auto", right: "auto", display: "flex"}}>
                 <form style={{marginLeft: "15px"}}>
                     <label>Destination </label>

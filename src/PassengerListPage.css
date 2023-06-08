@@ -16,6 +16,11 @@
     margin-bottom: 10px;
 }
 
+.logo {
+    width: 100px; /* Adjust the size as per your preference */
+    height: 100px; /* Adjust the size as per your preference */
+}
+
 .match-button {
     background-color: #4caf50;
     color: white;
@@ -24,6 +29,9 @@
     font-size: 14px;
     cursor: pointer;
     transition: background-color 0.3s;
+    margin-right: 20px;
+    max-width: 75px;
+    height: 47px;
 }
 
 .match-button.sent {
