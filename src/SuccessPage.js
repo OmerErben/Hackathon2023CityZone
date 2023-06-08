@@ -1,5 +1,5 @@
 import './PassengerListPage.css';
-import logo from "./worker.png";
+import logo from "./worker2.png";
 import party from "./vecteezy_realistic-multicolored-confetti-vector-for-the-festival_9345314_176.png"
 
 const SuccessPage = () => {

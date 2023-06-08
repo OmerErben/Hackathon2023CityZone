@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import './PassengerListPage.css';
-import logo from "./worker.png";
+import logo from "./worker2.png";
 
 const PassengerListPage = () => {
     const passengersData = [
