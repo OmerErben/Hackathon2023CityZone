@@ -1,4 +1,7 @@
 # Hackathon 2023 TAU
+<p align="center"> 
+<img  src="https://github.com/OmerErben/Hackathon2023CityZone/blob/master/RoadMateLogo.jpeg">
+</p>
 
 This project was written by Amir Ben Izhak, Itay Gonen & Omer Erben
 
